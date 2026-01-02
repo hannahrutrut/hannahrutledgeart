@@ -18,43 +18,23 @@
 
     </div>
 
-    <div id="nav-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
-            <div style="width:80%">
-            <img src="../docs/assets/images/2025_jellyfish_notebook_square.jpg", width =500 pixels, alt="art pic">
-            </div>
-        </div>
-    </div>
+  <div style="width:80%">
+    <img src="../docs/assets/images/2025_jellyfish_notebook_square.jpg" width="500" alt="art pic">
+  </div>
 
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
 
 <script>
 fetch("../partials/nav.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("nav-placeholder").innerHTML = data;
+    initNav(); //
   });
 </script>
+
+<script src="../scripts/nav.js"></script>
 
 </body>
 

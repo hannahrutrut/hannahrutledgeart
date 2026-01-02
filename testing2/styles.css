@@ -5,6 +5,8 @@
 body {
   background-color: white;
   font-family: verdana;
+  margin: 0;
+
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -25,12 +27,119 @@ div {
    ===================== */
 
 .site-header {
-  min-height: 300px;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: transparent;
+
+  z-index: 1000;
 }
 
 .nav {
   display: flex;
   align-items: flex-start;
+}
+
+/* Desktop nav is visible */
+.nav-left {
+  display: block;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+}
+
+/* Mobile menu hidden by default */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  top: 100%;          /* below header */
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Show mobile menu when toggled */
+.mobile-menu.show {
+  display: flex;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .nav-left {
+    display: none;     /* hide desktop nav on mobile */
+  }
+  .hamburger {
+    display: block;    /* show hamburger */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+  }
+}
+
+.mobile-menu a:hover {
+  color: gray;
+  text-decoration: underline;
+}
+
+/* =====================
+   Mobile menu
+   ===================== */
+@media screen and (max-width: 768px) {
+
+  /* Hide desktop nav on small screens */
+  .nav-left {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;      /* show hamburger */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* Optional: make nav-right disappear or shrink */
+  .nav-right {
+    display: none;
+  }
+}
+
+
+
+/* =====================
+   Gallery
+   ===================== */
+
+.page-content {
+  display: flex;
+  margin-top: 1.5rem; /* optional spacing under header */
+}
+
+.gallery-container {
+  width: 80%;           /* same as nav-right */
+  margin-left: 20%;     /* push content past nav */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* =====================
@@ -61,6 +170,16 @@ a:active {
 
 .nav {
   display: flex;
+  align-items: flex-start;
+}
+
+.nav > div:first-child {
+  width: 20%;
+}
+
+.nav-right {
+  width: 80%;
+  background-color: transparent !important;
 }
 
 /* =====================
