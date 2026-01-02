@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+
+    <title>Art by Hannah</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+
+</head>
+
+<body>
+
+    <div style="width: 500px; margin: auto; text-align: center">
+
+        <h1 title="Welcome to Hannah Rutledge Art" >Hannah Rutledge Art</h1>
+        <h2 title="Ink Drawings">Ink Drawings</h2>
+        <p style="color: gray;">Gel pens | Fountain pens | Micron fineliners</p>
+
+    </div>
+
+    <div class="site-header">
+        <div class="nav">
+            <div style="width:20%">
+
+                <h2 title="Home" style="font-size: 100%;">Home</h2>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Gallery</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="../Gallery/InkDrawings/index.html">Ink drawings</a>
+                        <a href="../Gallery/LinocutPrints/index.html">Linocut prints</a>
+                        <a href="../Gallery/Paintings/index.html">Paintings</a>
+                    </div>
+                </div>
+                <h2 title="About" style="font-size: 100%">About</h2>
+            <!--h2 title="Contact" style="font-size: 100%">Contact</h2-->
+            <!--h2 title="Impressum" style="font-size: 100%">Impressum</h2-->
+
+            </div>
+
+            <div style="width:80%">
+            <img src="../docs/assets/images/2025_jellyfish_notebook_square.jpg", width =500 pixels, alt="art pic">
+            </div>
+        </div>
+    </div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+
+</html>
