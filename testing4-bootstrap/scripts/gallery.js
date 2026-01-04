@@ -1,28 +1,25 @@
-fetch("../../data/images.json")
-  .then(response => response.json())
+fetch("/data/images.json")
+  .then(res => res.json())
   .then(images => {
     const gallery = document.getElementById("gallery");
     const filter = window.GALLERY_FILTER;
 
-    // filter by gallery or tag
     const filteredImages = images
       .filter(img => img.gallery === filter || img.tags?.includes(filter))
-      .sort((a, b) => new Date(b.date) - new Date(a.date)); // newest first
+      .sort((a,b) => new Date(b.date) - new Date(a.date));
 
     filteredImages.forEach(img => {
-      // Bootstrap column
       const col = document.createElement("div");
       col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
 
-      // Image element
       const imageEl = document.createElement("img");
-      imageEl.src = `../../docs/assets/images/${img.filename}`; // <-- match your folder
+      imageEl.src = `/docs/assets/images/${img.filename}`;
       imageEl.alt = img.title || "";
-      imageEl.className = "img-fluid"; // responsive in Bootstrap
+      imageEl.className = "img-fluid";
       imageEl.loading = "lazy";
 
       col.appendChild(imageEl);
       gallery.appendChild(col);
     });
   })
-  .catch(err => console.error("Error loading images.json", err));
+  .catch(err => console.error("Error loading images:", err));
