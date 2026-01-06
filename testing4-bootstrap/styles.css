@@ -69,6 +69,10 @@ p {
   margin-top: 250px; /* push below header */
 }
 
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 /* =====================
    Gallery
 ===================== */

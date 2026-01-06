@@ -1,0 +1,98 @@
+/*changes hannah rutledge art log from horizontal to stacked for mobile*/
+.responsive-logo {
+    background-image: url('/docs/assets/images/logo2_horizontal_transparent_background_3-01.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 1000px75%; /* Adjust this to your preferred maximum size */
+    height: 150px; /* Adjust this to match your logo's aspect ratio */
+    margin: 0 auto; /* Centers the logo */
+}
+
+@media (max-width: 750px) {
+    .responsive-logo {
+        background-image: url('/docs/assets/images/logo1_stacked_transparent_background-01.jpg');
+        height: 180px;
+    }
+}
+
+.page-title {
+
+}
+
+/*use new font for everyting*/
+.electrolize-regular {
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    font-family: Electrolize;
+}
+
+/*navbar stuff*/
+.navbar-nav .nav-item .nav-link.active {
+    text-decoration: underline;
+}
+
+/*dropdown*/
+.dropdown-menu {
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #495057;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Gallery card styling - frame around image only */
+.gallery-card {
+    border: 3px solid #000;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 6px #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px #000, 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.gallery-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-info {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.gallery-info h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.gallery-info p {
+    margin-bottom: 0;
+}
+
+.gallery-card a {
+    display: block;
+    cursor: pointer;
+}
+
+.gallery-card a:hover img {
+    opacity: 0.9;
+}

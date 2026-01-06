@@ -1,235 +1,98 @@
-/* =====================
-   Base / Global Styles
-   ===================== */
+/*changes hannah rutledge art log from horizontal to stacked for mobile*/
+.responsive-logo {
+    background-image: url('/docs/assets/images/logo2_horizontal_transparent_background_3-01.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 1000px75%; /* Adjust this to your preferred maximum size */
+    height: 150px; /* Adjust this to match your logo's aspect ratio */
+    margin: 0 auto; /* Centers the logo */
+}
+
+@media (max-width: 750px) {
+    .responsive-logo {
+        background-image: url('/docs/assets/images/logo1_stacked_transparent_background-01.jpg');
+        height: 180px;
+    }
+}
+
+.page-title {
+
+}
+
+/*use new font for everyting*/
+.electrolize-regular {
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
-  background-color: white;
-  font-family: verdana;
-  margin: 0;
-
+    font-family: Electrolize;
 }
 
-:is(h1, h2, h3, h4, h5, h6) {
-  color: black;
+/*navbar stuff*/
+.navbar-nav .nav-item .nav-link.active {
+    text-decoration: underline;
 }
 
-p {
-  margin: 0.5em 0;
+/*dropdown*/
+.dropdown-menu {
+    background-color: #343a40;
 }
 
-div {
-  margin: 0;
-  text-align: left;
+.dropdown-item {
+    color: rgba(255, 255, 255, 0.55);
 }
 
-/* =====================
-   Header / Nav Styles
-   ===================== */
-
-.site-header {
-  position: fixed;
-  top: 100px;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  background-color: transparent;
-
-  z-index: 1000;
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #495057;
+    color: rgba(255, 255, 255, 0.75);
 }
 
-.nav {
-  display: flex;
-  align-items: flex-start;
+/* Gallery card styling - frame around image only */
+.gallery-card {
+    border: 3px solid #000;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 6px #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: 10px;
 }
 
-/* Desktop nav is visible */
-.nav-left {
-  display: block;
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px #000, 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Hamburger hidden on desktop */
-.hamburger {
-  display: none;
+.gallery-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
 }
 
-/* Mobile menu hidden by default */
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  background: white;
-  position: absolute;
-  top: 100%;          /* below header */
-  left: 0;
-  width: 100%;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.gallery-info {
+    text-align: center;
+    padding: 0.5rem 0;
 }
 
-/* Show mobile menu when toggled */
-.mobile-menu.show {
-  display: flex;
+.gallery-info h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
 }
 
-/* Mobile styles */
-@media screen and (max-width: 768px) {
-  .nav-left {
-    display: none;     /* hide desktop nav on mobile */
-  }
-  .hamburger {
-    display: block;    /* show hamburger */
-    background: none;
-    border: none;
-    font-size: 2rem;
+.gallery-info p {
+    margin-bottom: 0;
+}
+
+.gallery-card a {
+    display: block;
     cursor: pointer;
-    color: black;
-  }
 }
 
-.mobile-menu a:hover {
-  color: gray;
-  text-decoration: underline;
-}
-
-/* =====================
-   Mobile menu
-   ===================== */
-@media screen and (max-width: 768px) {
-
-  /* Hide desktop nav on small screens */
-  .nav-left {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;      /* show hamburger */
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-
-  /* Optional: make nav-right disappear or shrink */
-  .nav-right {
-    display: none;
-  }
-}
-
-
-
-/* =====================
-   Gallery
-   ===================== */
-
-.page-content {
-  display: flex;
-  margin-top: 1.5rem; /* optional spacing under header */
-}
-
-.gallery-container {
-  width: 80%;           /* same as nav-right */
-  margin-left: 20%;     /* push content past nav */
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* =====================
-   Links
-   ===================== */
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-a:hover {
-  color: gray;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: black;
-}
-
-a:active {
-  color: gray;
-}
-
-/* =====================
-   Layout
-   ===================== */
-
-.nav {
-  display: flex;
-  align-items: flex-start;
-}
-
-.nav > div:first-child {
-  width: 20%;
-}
-
-.nav-right {
-  width: 80%;
-  background-color: transparent !important;
-}
-
-/* =====================
-   Dropdown Menu
-   ===================== */
-
-.dropdown {
-  display: inline-block;
-}
-
-/* Dropdown Button (styled like heading) */
-.dropbtn {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-
-  font: inherit;
-  font-weight: bold;
-  color: black;
-
-  cursor: pointer;
-  text-align: left;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-  color: gray;
-  text-decoration: underline;
-}
-
-.dropbtn:focus {
-  outline: 2px dotted gray;
-}
-
-/* Dropdown Content */
-.dropdown-content {
-  display: none;
-  min-width: 160px;
-}
-
-/* Dropdown Links */
-.dropdown-content a {
-  display: block;
-  padding: 0.3em 0 0.3em 1.5em;
-  font: inherit;
-  font-weight: normal;
-}
-
-/* Show dropdown */
-.show {
-  display: block;
+.gallery-card a:hover img {
+    opacity: 0.9;
 }
