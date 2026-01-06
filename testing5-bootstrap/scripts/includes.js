@@ -70,7 +70,6 @@ function setActiveNavLink() {
 document.addEventListener('DOMContentLoaded', async () => {
   await loadHTML('header', '/partials/header.html');
   await loadHTML('footer', '/partials/footer.html');
-  await loadHTML('gallery', '/partials/gallery.html');
   await loadHTML('navbar', '/partials/navbar.html');
   
   // Set active nav link AFTER navbar is loaded

@@ -1,5 +1,4 @@
 // galleryLoader.js
-
 // Function to determine which gallery page we're on
 function getCurrentGallery() {
   const path = window.location.pathname;
@@ -45,6 +44,9 @@ async function loadGalleryImages() {
     const galleryContainer = document.getElementById('gallery-images');
     if (galleryContainer) {
       galleryContainer.innerHTML = galleryHTML;
+      
+      // Add lightbox functionality
+      setupLightbox();
     } else {
       console.error('Gallery container with id "gallery-images" not found');
     }
@@ -69,13 +71,12 @@ function generateGalleryHTML(images) {
   images.forEach(image => {
     const imagePath = `/docs/assets/images/${image.filename}`;
     const mediumText = image.medium.join(', ');
-    const tagsText = image.tags.join(', ');
     
     html += `
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="gallery-item">
           <div class="gallery-card">
-            <a href="${imagePath}" target="_blank" rel="noopener noreferrer">
+            <a href="#" class="lightbox-trigger" data-image="${imagePath}" data-title="${image.title}">
               <img src="${imagePath}" alt="${image.title}" loading="lazy">
             </a>
           </div>
@@ -96,7 +97,56 @@ function generateGalleryHTML(images) {
   
   html += '</div></div>';
   
+  // Add lightbox modal HTML
+  html += `
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  `;
+  
   return html;
+}
+
+// Function to setup lightbox functionality
+function setupLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const closeBtn = document.querySelector('.lightbox-close');
+  
+  // Add click event to all lightbox triggers
+  document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      const imgSrc = this.getAttribute('data-image');
+      const title = this.getAttribute('data-title');
+      
+      lightbox.style.display = 'block';
+      lightboxImg.src = imgSrc;
+      lightboxCaption.textContent = title;
+    });
+  });
+  
+  // Close lightbox when clicking the X
+  closeBtn.addEventListener('click', function() {
+    lightbox.style.display = 'none';
+  });
+  
+  // Close lightbox when clicking outside the image
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+  
+  // Close lightbox with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.style.display === 'block') {
+      lightbox.style.display = 'none';
+    }
+  });
 }
 
 // Load gallery images when DOM is ready
