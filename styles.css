@@ -21,6 +21,12 @@
 
 }
 
+/* Header spacing */
+#header {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
 /*use new font for everyting*/
 .electrolize-regular {
   font-family: "Electrolize", sans-serif;
@@ -69,8 +75,13 @@ body {
 
 .gallery-card img {
     width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
+    height: auto;
+    display: block;
+}
+/* Landscape images get double height */
+.gallery-landscape .gallery-card img {
+    width: 100%;
+    height: auto;
     display: block;
 }
 

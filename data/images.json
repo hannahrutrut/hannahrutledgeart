@@ -1,45 +1,5 @@
 [
-  {
-    "filename": "2025.08_jellyfish_gelly.jpg",
-    "title": "Jellyfish",
-    "gallery": "Ink Drawings",
-    "date": "2025-08",
-    "medium":["gel pens"],
-    "tags": ["ocean", "animal", "jellyfish", "gel pens"],
-    "size": "A4",
-    "collections": ["vibrant life"]
-  },
-  {
-    "filename": "2025.08_lion_gelly.jpg",
-    "title": "Lion",
-    "gallery": "Ink Drawings",
-    "date": "2025-08",
-    "medium":["gel pens"],
-    "tags": ["animal", "lion", "gel pens"],
-    "size":"A4",
-    "collections": ["vibrant life"]
-  },
-    {
-    "filename": "2025.08_fish_gelly.jpg",
-    "title": "Siamese Beta",
-    "gallery": "Ink Drawings",
-    "date": "2025-08",
-    "medium":["gel pens"],
-    "tags": ["animal", "fish", "ocean", "gel pens"],
-    "size":"A4",
-    "collections": ["vibrant life"]
-  },
-    {
-    "filename": "2025.08_cat_pattern_gelly.jpg",
-    "title": "Deco Cat",
-    "gallery": "Ink Drawings",
-    "date": "2025-08",
-    "medium":["gel pens"],
-    "tags": ["animal","pattern","cat","gel pens"],
-    "size":"A4",
-    "collections": ["vibrant life"]
-  },
-    {
+      {
     "filename": "2025.08_whale_wc.jpg",
     "title": "Well well whale",
     "gallery": "Paintings",
@@ -128,5 +88,135 @@
     "tags": ["animal", "peacock", "bird", "stained glass"],
     "size":null,
     "collections": []
+  },
+  {
+    "filename": "2025.08_bee.jpg",
+    "title": "Not So Busy Bee",
+    "gallery": "Ink Drawings",
+    "date": "2025-08",
+    "medium":["gel pens"],
+    "tags": ["animals", "gel pens", "bright", "bea", "insect"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
+  },
+    {
+    "filename": "2025.08_beta.jpg",
+    "title": "You Beta Believe It",
+    "gallery": "Ink Drawings",
+    "date": "2025-08",
+    "medium":["gel pens"],
+    "tags": ["animals", "gel pens", "bright", "fish", "ocean"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
+  },
+    {
+    "filename": "2025.08_blue_flower.jpg",
+    "title": "Blue Flower",
+    "gallery": "Ink Drawings",
+    "date": "2025-08",
+    "medium":["gel pens"],
+    "tags": ["flowers", "gel pens", "bright", "plants"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
+  },
+    {
+    "filename": "2025.08_deco_cat.jpg",
+    "title": "Deco Cat",
+    "gallery": "Ink Drawings",
+    "date": "2025-08",
+    "medium":["gel pens"],
+    "tags": ["animals", "gel pens", "bright", "pattern", "cat"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
+  },
+    {
+    "filename": "2025.08_jellyfish.jpg",
+    "title": "Jellyfish",
+    "gallery": "Ink Drawings",
+    "date": "2025-08",
+    "medium":["gel pens"],
+    "tags": ["animals", "gel pens", "bright", "ocean", "fish", "jellyfish"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
+  },
+    {
+    "filename": "2025.08_lion.jpg",
+    "title": "Leo",
+    "gallery": "Ink Drawings",
+    "date": "2025-08",
+    "medium":["gel pens"],
+    "tags": ["animals", "gel pens", "bright", "lion"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
+  },
+    {
+    "filename": "2025.08_octopus.jpg",
+    "title": "Octopus",
+    "gallery": "Ink Drawings",
+    "date": "2025-08",
+    "medium":["gel pens"],
+    "tags": ["animals", "gel pens", "bright", "fish", "octopus", "ocean"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
+  },
+    {
+    "filename": "2025.08_peacock.jpg",
+    "title": "Your Majesty Peacock",
+    "gallery": "Ink Drawings",
+    "date": "2025-08",
+    "medium":["gel pens"],
+    "tags": ["animals", "gel pens", "bright", "bird", "peacock"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
+  },
+    {
+    "filename": "2025.08_pointilism_flower.jpg",
+    "title": "Flower",
+    "gallery": "Ink Drawings",
+    "date": "2025-08",
+    "medium":["gel pens"],
+    "tags": ["flowers", "gel pens", "bright", "pointilism", "plants"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
+  },
+    {
+    "filename": "2025.08_purple_abstract.jpg",
+    "title": "Underwater Abstract",
+    "gallery": "Ink Drawings",
+    "date": "2025-08",
+    "medium":["gel pens"],
+    "tags": ["abstract", "gel pens", "bright"],
+    "size":"21 x 30 cm",
+    "collections": []
+  },
+    {
+    "filename": "2025.09_leaves.jpg",
+    "title": "Leaves As Big As Your Head",
+    "gallery": "Ink Drawings",
+    "date": "2025-09",
+    "medium":["gel pens"],
+    "tags": ["plants", "gel pens", "bright"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
+  },
+    {
+    "filename": "2025.09_rainbow_tardigrade.jpg",
+    "title": "Rainbow Tardigrade",
+    "gallery": "Ink Drawings",
+    "date": "2025-09",
+    "medium":["gel pens"],
+    "tags": ["animals", "gel pens", "bright", "tardigrade", "rainbow"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
+  },
+      {
+    "filename": "2025.10_peacock.jpg",
+    "title": "Your Highness Peacock",
+    "gallery": "Ink Drawings",
+    "date": "2025-10",
+    "medium":["gel pens"],
+    "tags": ["animals", "gel pens", "bright", "peacock"],
+    "size":"21 x 30 cm",
+    "collections": ["vibrant life"]
   }
 ]
